@@ -51,7 +51,7 @@ model = tf.keras.models.Sequential([
 ])
 
 print("--------------------------------------------------------------------------------------------------------------")
-print("Will scan through drop out keep probabilities to explore the model performance as a function of this parameter")
+print("Will train a multilayer perceptron using some toy data following y = x^2")
 print("--------------------------------------------------------------------------------------------------------------\n\n")
 print("Input data MNIST")
 print("2 layer MLP with configuration 1:128:128:1")
@@ -60,6 +60,8 @@ print("Leaky relu parameter = 0.1")
 print("ValidationSplit      = ", ValidationSplit)
 print("BatchSize            = ", BatchSize)
 print("Nepochs              = ", Nepochs, "\n")
+print("N(train)             = ", len(x_train)
+print("N(test)              = ", len(x_test)
 
 
 # now specify the loss function 

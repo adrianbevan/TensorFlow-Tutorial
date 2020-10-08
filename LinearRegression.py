@@ -52,10 +52,12 @@ model = tf.keras.models.Sequential()
 model.add( tf.keras.layers.Dense(1, activation='linear', input_shape=[1,]) )
 
 print("--------------------------------------------------------------------------------------------------------------")
-print("Will scan through drop out keep probabilities to explore the model performance as a function of this parameter")
+print("Will perform a linear regression optimisation")
 print("--------------------------------------------------------------------------------------------------------------\n\n")
 print("Input data Linear Regression Data")
 print("Nepochs              = ", Nepochs, "\n")
+print("N(train)             = ", len(x_train)
+print("N(test)              = ", len(x_test)
 
 # now specify the loss function - cross entropy
 loss_fn = tf.keras.losses.MSE
@@ -82,7 +84,7 @@ plt.plot(history.history['loss'])
 plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
-#plt.show()
+plt.show()
 plt.savefig("fig/LinearRegression_loss_vs_epochs.pdf")
 plt.savefig("fig/LinearRegression_loss_vs_epochs.png")
 plt.clf()
