@@ -22,4 +22,4 @@ to make directories expected for the output plots and log files.
 ### Other machine learning tutorials.
 
 If you find this tutorial useful you may also be interested in my (particle physics focused) machine learning notes that can be found 
-online at https://pprc.qmul.ac.uk/~bevan/abevan.html.
+online at https://pprc.qmul.ac.uk/~bevan/abevan.html. 
