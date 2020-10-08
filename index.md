@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+## Welcome to my TensorFlow Tutorial Pages
 
-You can use the [editor on GitHub](https://github.com/adrianbevan/TensorFlow-Tutorial/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Overview.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This site have been prepared for undergraduate and graduate tutorials on the use of TensorFlow for a few different types of machine learning algorithm. The tutorial covers:
+- Linear Regression
+- Multilayer Perceptrons
+- Convolutional Neural Networks
 
-### Markdown
+with an emphasis on explring the use of these algorithms from a pedagogical perspective.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Getting started
 
+As the half-life of a given version of code is short, TensorFlow and other Python libraries can change with time. Please do make sure that you check the file **requirements.txt** to ensure that you are trying to use these files with the correct library versions to avoid frustration.
+
+If you are using a UNIX/LINUX based system then please make sure that before doing anything else you run the following 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+source setup.sh
 ```
+to make directories expected for the output plots and log files.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Other machine learning tutorials.
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adrianbevan/TensorFlow-Tutorial/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+If you find this tutorial useful you may also be interested in my (particle physics focused) machine learning notes that can be found 
+online at https://pprc.qmul.ac.uk/~bevan/abevan.html.
