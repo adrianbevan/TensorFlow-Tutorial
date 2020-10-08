@@ -62,4 +62,10 @@ Note that requirements.txt lists specific package versions that this tutorial
 has been written with.  That file has been included to ensure that this
 repository can be used with Binder (see https://mybinder.org for details).
 
+Please see the following URL for the Binder docker for this tutorial:
+
+  https://mybinder.org/v2/gh/adrianbevan/TensorFlow-Tutorial.git/main
+
+
+--------------------------------------------------------------------------
 AB 8th Oct 2020
