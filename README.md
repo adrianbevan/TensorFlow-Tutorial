@@ -29,6 +29,13 @@ the following machine learning problems:
         UseMNIST = True
     is set.  In order to fit CFAR10 data then set UseMNIST to False.
 
+To get started run the following command:
+
+   source setup.sh
+   
+This will create directories required for output figures and log files,
+and prints a brief summary of the hyperparameter scan scripts.
+
 --------------------------------------------------------------------------
 Each of the examples has been written to allow the user to explore
 pedegogical aspects of machine learning, starting with probing the
