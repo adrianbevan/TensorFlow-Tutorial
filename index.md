@@ -23,3 +23,9 @@ to make directories expected for the output plots and log files.
 
 If you find this tutorial useful you may also be interested in my (particle physics focused) machine learning notes that can be found 
 online at https://pprc.qmul.ac.uk/~bevan/abevan.html. 
+
+### Binder
+
+This git repository has been set up for use in Binder.  Please click on the link below in order to launch a binder session.
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/adrianbevan/TensorFlow-Tutorial.git/main)
