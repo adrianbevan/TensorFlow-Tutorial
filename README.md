@@ -66,6 +66,7 @@ Please see the following URL for the Binder docker for this tutorial:
 
   https://mybinder.org/v2/gh/adrianbevan/TensorFlow-Tutorial.git/main
 
+  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/adrianbevan/TensorFlow-Tutorial.git/main)
 
 --------------------------------------------------------------------------
 AB 8th Oct 2020
