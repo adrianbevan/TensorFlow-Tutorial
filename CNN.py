@@ -85,8 +85,8 @@ print("Leaky relu parameter = 0.1")
 print("ValidationSplit      = ", ValidationSplit)
 print("BatchSize            = ", BatchSize)
 print("Nepochs              = ", Nepochs, "\n")
-print("N(train)             = ", len(x_train)
-print("N(test)              = ", len(x_test)
+print("N(train)             = ", len(x_train))
+print("N(test)              = ", len(x_test))
 model.summary()
 
 

@@ -56,8 +56,8 @@ print("Will perform a linear regression optimisation")
 print("--------------------------------------------------------------------------------------------------------------\n\n")
 print("Input data Linear Regression Data")
 print("Nepochs              = ", Nepochs, "\n")
-print("N(train)             = ", len(x_train)
-print("N(test)              = ", len(x_test)
+print("N(train)             = ", len(x_train))
+print("N(test)              = ", len(x_test))
 
 # now specify the loss function - cross entropy
 loss_fn = tf.keras.losses.MSE
