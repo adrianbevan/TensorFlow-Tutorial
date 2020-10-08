@@ -17,30 +17,30 @@ echo "---------------------------------------------------------------"
 echo ""
 echo "Make directories required for the tutorial output"
 echo ""
-if [ ! -d log ]; then
-  echo "  Making the directory ./fig"
-  mkdir fig
+if [ ! -d scripts/log ]; then
+  echo "  Making the directory ./scripts/fig"
+  mkdir scripts/fig
 else
-  echo "  The directory ./fig already exists"
+  echo "  The directory ./scripts/fig already exists"
 fi
 
-if [ ! -d log ]; then
-  echo "  Making the directory ./log"
-  mkdir log
+if [ ! -d scripts/log ]; then
+  echo "  Making the directory ./scripts/log"
+  mkdir scripts/log
 else
-  echo "  The directory ./log already exists"
+  echo "  The directory ./scripts/log already exists"
 fi
 echo ""
 
 
 echo "Please run the following command to check that these now exist"
 echo ""
-echo "   ls "
+echo "   ls scripts/"
 echo ""
 echo "In addition to the python files for this tutorial you should now see two new directories:"
 echo ""
-echo "  ./fig    - used by the scripts to save output plots generated during model training"
-echo "  ./log    - used by the runAll.sh script to save log files for the optimisation scripts:"
+echo "  ./scripts/fig    - used by the scripts to save output plots generated during model training"
+echo "  ./scripts/log    - used by the runAll.sh script to save log files for the optimisation scripts:"
 echo ""
 echo "              BatchSizeNN.py       - scan through different batch sizes to study loss"
 echo "                                     and accuracy performance of training as a function"
@@ -58,3 +58,7 @@ echo "              ValidationSplitNN.py - scan through different validation spl
 echo "                                     and accuracy performance of training as a function"
 echo "                                     of this hyperparameter"
 echo ""
+echo "This tutorial comes with a set of scripts and a set of jupyter notebooks.  Please refer to"
+echo "the relevant directories for your preferred format of example:"
+echo "     scripts   "
+echo "     notebooks "
