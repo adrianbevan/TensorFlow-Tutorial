@@ -30,6 +30,6 @@ online at https://pprc.qmul.ac.uk/~bevan/abevan.html.
 
 ### Binder
 
-This git repository has been set up for use in Binder.  Please click on the link below in order to launch a binder session.
+This git repository has been set up for use in Binder.  Please click on the link below in order to launch a binder session.  Once the session starts please navigate to the folder `notebooks` and select the example that you would like to work through.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/adrianbevan/TensorFlow-Tutorial.git/main)
