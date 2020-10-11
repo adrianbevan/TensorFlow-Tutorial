@@ -69,7 +69,7 @@ print("Number of training iterations = ", len(BatchSizes))
 
 
 for BatchSize in BatchSizes:
-  print("\nTraining model using a validation split of ", ValidationSplit)
+  print("\nTraining model using a BatchSize of ", BatchSize)
 
   model = tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28, 28)),
@@ -97,7 +97,7 @@ for BatchSize in BatchSizes:
   all_val_acc.append(history.history['val_accuracy'][-1])
   
 
-print("\nDisplay the evolution of the accuracy as a function of the validation sample fraction")
+print("\nDisplay the evolution of the accuracy as a function of the batch size")
 print("  BatchSizes       = ", BatchSizes)
 print("  accuracy (train) = ", all_acc)
 print("  accuracy (test)  = ", all_val_acc)
@@ -106,8 +106,8 @@ plt.plot(BatchSizes, all_acc)
 plt.plot(BatchSizes, all_val_acc)
 plt.title('model accuracy')
 plt.ylabel('accuracy')
-plt.xlabel('Validation sample fraction')
-plt.legend(['train', 'test'], loc='upper right')
+plt.xlabel('Batch Size')
+plt.legend(['train', 'validate'], loc='upper right')
 print("Plotting the output to fig/BatchSizeNN_MLP_accuracy_vs_epochs.*")
 plt.savefig("fig/BatchSizeNN_MLP_accuracy.pdf")
 plt.savefig("fig/BatchSizeNN_MLP_accuracy.png")
@@ -124,8 +124,8 @@ plt.plot(BatchSizes, all_loss)
 plt.plot(BatchSizes, all_val_loss)
 plt.title('model loss')
 plt.ylabel('loss')
-plt.xlabel('Validation sample fraction')
-plt.legend(['train', 'test'], loc='lower right')
+plt.xlabel('Batch Size')
+plt.legend(['train', 'validate'], loc='lower right')
 print("Plotting the output to fig/BatchSizeNN_MLP_loss_vs_epochs.*")
 plt.savefig("fig/BatchSizeNN_MLP_loss.pdf")
 plt.savefig("fig/BatchSizeNN_MLP_loss.png")
