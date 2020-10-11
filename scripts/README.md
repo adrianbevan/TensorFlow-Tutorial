@@ -9,6 +9,8 @@ api.py
     - MNIST data (from keras)
     - CFAR10 data (from keras)
 
+TensorFlow/Keras Examples
+-------------------------
 LinearRegression.py
   This is a simple linear regression example
   
@@ -21,7 +23,7 @@ NN_parabola.py
 CNN.py
   This is a convolutional neural network for use with the MNIST and CFAR10
   data.
-  
+
 HyperParameter Scan Scripts:
 ----------------------------
   The following scripts perform a hyperparameter scan to study the accuracy and loss
@@ -32,3 +34,20 @@ HyperParameter Scan Scripts:
     BatchSizeNN.py
     DropoutNN.py
     LeakyReluScanNN.py
+
+SciKit Learn Examples 
+---------------------
+These have been included to provide access to examples of other types of supervised learning
+algorithms that may be encountered in the physcial sciences, beyond neural networks.
+
+SK_DT.py
+  This is a decision tree example (uses sklearn)
+  
+SK_BDT.py
+  This is a bosted decision tree example (uses the Adaboost from sklearn)
+
+SK_RF.py
+  This is a random forest example (uses sklearn)
+  
+SK_SVM.py
+  This is a support vector machine example (uses the SVM from sklearn, i.e. libsvm)

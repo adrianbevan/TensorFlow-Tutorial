@@ -38,10 +38,10 @@ DropoutValue    = 0.6
 #   UseMNIST = True       - configure and train using MNIST
 #
 UseMNIST = False 
-x_train = None
-y_train = None
-x_test  = None
-y_test  = None
+x_train  = None
+y_train  = None
+x_test   = None
+y_test   = None
 if UseMNIST:
   x_train, y_train, x_test, y_test = api.getMNIST()
   x_train = x_train.reshape((x_train.shape[0], 28, 28, 1))
@@ -77,11 +77,15 @@ model.add(keras.layers.Dense(64, activation='relu'))
 model.add(keras.layers.Dense(10))
 
 print("--------------------------------------------------------------------------------------------------------------")
-print("Will train a convolutional neural network on the MNIST data")
+if UseMNIST:
+    print("\033[1mWill train a convolutional neural network on the MNIST data\033[0m")
+else:
+    print("\033[1mWill train a convolutional neural network on the CFAR10 data\033[0m")
+
 print("--------------------------------------------------------------------------------------------------------------\n\n")
 print("Input data MNIST")
 print("Dropout values       = ", DropoutValue)
-print("Leaky relu parameter = 0.1")
+print("Leaky relu parameter =  0.1")
 print("ValidationSplit      = ", ValidationSplit)
 print("BatchSize            = ", BatchSize)
 print("Nepochs              = ", Nepochs, "\n")
@@ -110,7 +114,7 @@ history  = model.fit(x_train, y_train, validation_split=ValidationSplit, batch_s
 # The val_* entries exist only if there is a validation_split specified
 print("history keys = ", history.history.keys())
 
-print("Display the evolution of the accuracy as a function of the training epoch")
+print("\033[1mDisplay the evolution of the accuracy as a function of the training epoch\033[0m")
 print("  N(Epochs)        = ", Nepochs)
 print("  accuracy (train) = ", history.history['accuracy'])
 print("  accuracy (test)  = ", history.history['val_accuracy'])
@@ -119,14 +123,14 @@ plt.plot(history.history['val_accuracy'])
 plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
+plt.legend(['train', 'validate'], loc='upper left')
 #plt.show()
 print("Plotting the output to fig/CNN_accuracy_vs_epochs.*")
 plt.savefig("fig/CNN_accuracy_vs_epochs.pdf")
 plt.savefig("fig/CNN_accuracy_vs_epochs.png")
 plt.clf()
 
-print("Display the evolution of the loss as a function of the training epoch")
+print("\033[1mDisplay the evolution of the loss as a function of the training epoch\033[0m")
 print("  N(Epochs)        = ", Nepochs)
 print("  loss (train)     = ", history.history['loss'])
 print("  loss (test)      = ", history.history['val_loss'])
@@ -137,7 +141,7 @@ plt.plot(history.history['val_loss'])
 plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
-plt.legend(['train', 'test'], loc='upper left')
+plt.legend(['train', 'validate'], loc='upper right')
 #plt.show()
 print("Plotting the output to fig/CNN_loss_vs_epochs.*")
 plt.savefig("fig/CNN_loss_vs_epochs.pdf")
@@ -147,3 +151,10 @@ plt.savefig("fig/CNN_loss_vs_epochs.png")
 print("\nPerformance summary (on test data):")
 loss, acc = model.evaluate(x_test,  y_test, verbose=2)
 print("\tloss = {:5.3f}\n\taccuracy = {:5.3f}".format(loss, acc))
+
+import numpy as np
+y = np.argmax(model.predict(x_test), axis=-1)
+print("\n\033[1mModel predictions for the first 10 test examples:\033[0m")
+for i in range(10):
+    print("ground truth for test example {:} = {:}, model prediction = {:}".format( i, y_test[i], y[i]) )
+
