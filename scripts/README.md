@@ -12,17 +12,25 @@ api.py
 TensorFlow/Keras Examples
 -------------------------
 LinearRegression.py
-  This is a simple linear regression example
-  
+  This is a simple linear regression example. i.e. this is a ML function
+  approximation example for the function y = mx+c.
+
 NN.py
   This is a multilayer perceptron example for use with the MNIST data
   
 NN_parabola.py
-  This is a multilayer perceptron example with the parabolic data
+  This is a multilayer perceptron example with the parabolic data, i.e.
+  this is a ML function approximation example for the function y=x^2.
   
 CNN.py
   This is a convolutional neural network for use with the MNIST and CFAR10
   data.
+
+NN_para_save.py
+NN_para_load.py
+  This is an extension of the NN_parabola.py script to split out the functionality
+  of learning a model (the MLP to approximate y=x^2), and the functionality to recall
+  that model in order to make predictions.
 
 HyperParameter Scan Scripts:
 ----------------------------
